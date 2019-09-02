@@ -1,4 +1,4 @@
-# gatsby-source-firestore
+# FORKED FROM gatsby-source-firestore
 
 [![npm version](https://badge.fury.io/js/gatsby-source-firestore.svg)](https://badge.fury.io/js/gatsby-source-firestore)
 
@@ -17,9 +17,9 @@ as a data source
 3. Add `gatsby-source-firestore` as a dependency by running using `npm` or `yarn`:
 
    ```sh
-   npm i gatsby-source-firestore
+   npm i gatsby-source-firestore-saphi
    # or
-   yarn add gatsby-source-firestore
+   yarn add gatsby-source-firestore-saphi
    ```
 
 4. Configure settings at `gatsby-config.js`, for example:
@@ -46,6 +46,8 @@ as a data source
               {
                 type: `Book`,
                 collection: `books`,
+                //custom query..
+                query: ref=>ref.limit(10),
                 map: doc => ({
                   title: doc.title,
                   isbn: doc.isbn,
@@ -101,10 +103,7 @@ as a data source
 | `types.collection` | The name of the collections in Firestore. **Nested collections are not tested**                                                              |
 | `types.map`        | A function to map your data in Firestore to Gatsby nodes, utilize the undocumented `___NODE` to link between nodes                           |
 
-## Disclaimer
 
-This project is created solely to suit our requirements, no maintenance or
-warranty are provided. Feel free to send in pull requests.
 
 ## Acknowledgement
 
