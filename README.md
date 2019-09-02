@@ -28,7 +28,7 @@ as a data source
    module.exports = {
       plugins: [
         {
-          resolve: `gatsby-source-firestore`,
+          resolve: `gatsby-source-firestore-saphi`,
           options: {
             // credential or appConfig
             credential: require(`./credentials.json`),
