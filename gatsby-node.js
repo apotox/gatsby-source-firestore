@@ -32,8 +32,14 @@ exports.sourceNodes = async (
   const { createNode } = boundActionCreators;
 
   const promises = types.map(
-    async ({ collection, type, map = node => node }) => {
-      const snapshot = await db.collection(collection).get();
+    async ({ collection, type, map = node => node,query }) => {
+      let ref = db.collection(collection);
+      
+      if(query){
+        ref = query(ref)
+      }
+      const snapshot = await ref.get();
+      
       for (let doc of snapshot.docs) {
         const contentDigest = getDigest(doc.id);
         createNode(
