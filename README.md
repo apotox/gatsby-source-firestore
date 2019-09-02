@@ -1,5 +1,5 @@
-# FORKED FROM gatsby-source-firestore
-
+# FORKED FROM gatsby-source-firestore 
+## adding query param to custom selection query..
 [![npm version](https://badge.fury.io/js/gatsby-source-firestore.svg)](https://badge.fury.io/js/gatsby-source-firestore)
 
 Gatsby source plugin for building websites using
@@ -14,7 +14,7 @@ as a data source
 2. Rename and put the downloaded `.json` crendtial file somewhere in the
    GatsbyJS project (e.g. `./credentials.json`)
 
-3. Add `gatsby-source-firestore` as a dependency by running using `npm` or `yarn`:
+3. Add `gatsby-source-firestore-saphi` as a dependency by running using `npm` or `yarn`:
 
    ```sh
    npm i gatsby-source-firestore-saphi
